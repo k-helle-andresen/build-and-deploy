@@ -1,10 +1,16 @@
 language: node_js
 node_js:
-  - '8'
+- '8'
 cache:
   directories:
   - node_modules
-script: 
-  -  npm run lint
-  -  npm test
-  -  npm run build
+script:
+- npm run lint
+- npm test
+- npm run build
+deploy:
+  provider: heroku
+  app: krispyk-build-and-deploy
+  skip_cleanup: true
+  api_key:
+    secure: yBtOzppGSjCh+c+0VlLcmCBi6YxgqTAzWbLDEEj9lpn7qEEWnbfxfy/bSX26WiFaBguh0fxLkyy9RtyNnxQt7bKSlmW/TIPzhxjp7azcBeE1sGriCrnWqq5ernCTVTp2LJ98KyWyLvg050DFF2V28SPqzNnhtjRpFf7d12hQJfrywAanC3IXrbj8CrH5Kn5zTNOl6+fD9EnpMzor7lh+lLB2N/en6mthn5e6StQFcM8lOx89kUVgYyL+JW/DpGS+pYZwevAPAWt1WdA+bO6QFeP8rv0EY2aV/Lbs31+uBrZuHidH8ojk5d4JvvIhgjp7467BVnAJPKsh0y3R+gwzwlX1vDjqGZoYQ+biRzwAJu/SWiEGbvHVQVYxJy6EkKyw/gOF5/qsLW9Ak96NfVMMFtNpjF+cbYs6erb7Qfl87z7cx256nOGHg/u3oaajba6cgyEiTNvY0HgXLwFoIlJbnld3CtKsA1I5tIw+pTI/T8/Kz2Pi6yCv8aUsEn0MGCxCtvBa3ClqzkJzosS7g08yJ7H4CJpsVc8z3SWtWfFj3qIXfm3AYt65vPKUinZ7FlD3WUZaeE7/xGVffoYWt2Qej4H4YS6KPwQFs8rDyKGK00D3IegWQavcvyzNpAP746SWBdadlZNk5Ol5u0+Q1CJaT+MYBHkRsa9eiRF+fjSEVlc=
